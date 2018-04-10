@@ -1,11 +1,12 @@
 body {
 	font-family: Verdana, Arial;
 	margin: 0px auto;
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 #header {
 	background: #0c3c6c;
+	height: 160px;
 }
 
 #header h1 {
@@ -105,10 +106,13 @@ td:last-child {
 	white-space: nowrap;
 	width: 250px;
 	overflow: scroll;
+	position: fixed;
 }
 
 #content {
 	overflow: scroll;
+	position: fixed;
+	left: 250px;
 }
 
 .dn {
@@ -147,9 +151,3 @@ td:last-child {
 .divTableBody {
 	display: table-row-group;
 }
-
-/*
-.divTable .divTable .divTableCell {
-	overflow: scroll;
-}
-*/

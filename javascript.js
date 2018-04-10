@@ -5,10 +5,12 @@ $(document).ready(function () {
 		$(this).parent().children('ul').toggle();
 	});
 
+	var nH = $(window).height() - $('#header').height();
+	var cW = $(window).width() - $('#nav').outerWidth();
+
 	$('body > .divTable').height($(window).height());
-	console.log('Table Height: ' + $('body > .divTable').height());	
-	console.log('Viewport - Header Height: ' + ($(window).height() - $('#header').height()));
-	console.log('Viewport Height: ' + $(window).height());
+	$('#nav').height(nH);
+	$('#content').height(nH).width(cW);
 });
 
 function loadPage(url) {
@@ -16,3 +18,12 @@ function loadPage(url) {
 		$("#content").html(data);
 	});
 }
+
+$(window).onresize(function () {
+	var nH = $(window).height() - $('#header').height();
+	var cW = $(window).width() - $('#nav').width();
+
+	$('body > .divTable').height($(window).height());
+	$('#nav').height(nH);
+	$('#content').height(nH).width(cW);
+});
